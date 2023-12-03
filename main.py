@@ -1,15 +1,15 @@
 import csv
-#introduction
 
+# Introduction
 def main():
-    print('Hello Everyone! This is our Data analysis code for the given sales file')
+    print('Hello Everyone! This is our data analysis code for the given sales file')
     file = open("sales.csv")
     filename = open('sales.csv', 'r')
 
     csvreader = csv.reader(file)
     csv_reader = csv.DictReader(filename)
 
-#making a list
+# Making a list
     header = next(csvreader)
     print(header)
     rows = []
@@ -37,7 +37,7 @@ def main():
     print(sale)
     print(expense)
 
-#calculations
+# Calculations
     total = sum(total_sale)
     print(" TOTAL SALE for the Year 2018 is" +' '+ str(total))
     tot_exp = sum(total_expense)
@@ -49,7 +49,7 @@ def main():
     print(' Lowest sale for the year 2018 is {}'.format(min(total_sale)))
 
 
-    #Calculate Profit or Loss
+# Calculate profit or loss
     expense_amount = float(input(" Please Enter the Expenditure: "))
     sale_amount = float(input(" Please Enter the Sales Amount: "))
 
@@ -62,7 +62,7 @@ def main():
     else:
             print("No Profit No Loss!!!")
 
-    # graph depicting sales vs expenditure in each month in 2018
+# Graph depicting sales vs expenditure in each month in 2018
     import matplotlib.pyplot as plt
     import numpy as np
 
